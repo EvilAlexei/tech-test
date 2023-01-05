@@ -1,0 +1,19 @@
+<section class="holder">
+  <section class="filters-col">
+    <app-filters [categories]="categories" (updateFilters)="filterList($event)"></app-filters>
+  </section>
+
+  <section class="list-col">
+    <h2 class="heading">ToDo List: </h2>
+
+    <app-item-create (createItem)="createItem($event)"></app-item-create>
+
+    <div class="list">
+      <ng-container *ngFor="let item of filteredItems; trackBy: trackByFn">
+        <app-todo-item [item]="item" (updateItem)=updateItem($event) (deleteItem)="deleteItem($event)"></app-todo-item>
+      </ng-container>
+
+      <p class="empty-items" *ngIf="!filteredItems.length">No suited items</p>
+    </div>
+  </section>
+</section>

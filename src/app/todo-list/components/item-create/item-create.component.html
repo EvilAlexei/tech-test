@@ -1,0 +1,27 @@
+<section class="card">
+  <form [formGroup]="form">
+    <div class="card__body">
+      <div class="row">
+        <label for="todo-label">* Label:</label>
+        <input class="form-el" type="text" name="todo-label" id="todo-label" formControlName="label">
+      </div>
+
+      <div class="row">
+        <label for="todo-description">* Description:</label>
+        <textarea class="form-el" name="todo-description" id="todo-description" formControlName="description"></textarea>
+      </div>
+
+      <div class="row">
+        <label for="todo-category">Category:</label>
+        <input class="form-el" type="text" name="todo-category" id="todo-category" formControlName="category">
+      </div>
+    </div>
+
+    <div class="card__footer">
+      <div class="options">
+        <button type="submit" (click)="submit()" [disabled]="form.invalid">{{ todo.id ? 'Update' : 'Create' }}</button>
+        <button (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</section>

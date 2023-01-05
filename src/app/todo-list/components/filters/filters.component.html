@@ -1,0 +1,19 @@
+<h2>Filters:</h2>
+
+<section class="holder">
+  <h3>Categories:</h3>
+  <div class="row categories">
+    <div *ngFor="let category of categoriesMap; trackBy: trackByFn">
+      <button (click)="filterByCategory(category)" [class.active]="category.selected">{{ category.value }}</button>
+    </div>
+  </div>
+
+  <h3>Status:</h3>
+  <div class="row statuses">
+    <div *ngFor="let status of statusesMap; trackBy: trackByFn">
+      <button (click)="filterByStatus(status)" [class.active]="status.selected">{{ status.value }}</button>
+    </div>
+  </div>
+
+  <button class="clear-filters" (click)="clearFilters()">Clear filters</button>
+</section>

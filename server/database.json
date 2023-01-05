@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "label": "Kitchen Cleanup",
+      "description": "Clean my dirty kitchen",
+      "category": "house",
+      "done": false
+    },
+    {
+      "id": 2,
+      "label": "Taxes",
+      "description": "Start doing my taxes and contact my accountant John for advice",
+      "category": "bureaucracy",
+      "done": true
+    },
+    {
+      "label": "Test item",
+      "description": "Item for testing",
+      "category": "test",
+      "done": false,
+      "id": 3
+    },
+    {
+      "label": "Buy a milk",
+      "description": "Buy some milk for family",
+      "category": "house",
+      "done": false,
+      "id": 4
+    }
+  ]
+}

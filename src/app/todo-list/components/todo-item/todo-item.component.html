@@ -1,0 +1,23 @@
+<section class="card" *ngIf="!isEditMode; else editBlock">
+  <div class="card__header">
+    <input type="checkbox" id="{{ item.id + '-' + item.label }}" [(ngModel)]="item.done" (change)="update(item)">
+    <label for="{{ item.id + '-' + item.label }}">{{ item.label }}</label>
+
+    <span class="category" *ngIf="item.category">{{ item.category }}</span>
+  </div>
+
+  <div class="card__body">
+    <p>{{ item.description }}</p>
+  </div>
+
+  <div class="card__footer">
+    <div class="options">
+      <button (click)="enableEdit()">Edit</button>
+      <button (click)="delete()">Delete</button>
+    </div>
+  </div>
+</section>
+
+<ng-template #editBlock>
+  <app-item-create [todo]="item" (updateItem)="update($event)" (cancelEdit)="cancelEdit()"></app-item-create>
+</ng-template>

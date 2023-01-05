@@ -1,0 +1,53 @@
+@import "~src/variables";
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.card {
+  border: $default-border;
+  border-radius: $border-radius;
+
+  &__header {
+    display: flex;
+    background: $background;
+    border-bottom: $default-border;
+    padding: $block-padding;
+    border-radius: $border-radius $border-radius 0 0;
+    align-items: center;
+    min-height: 26px;
+  }
+
+  &__body {
+    padding: 8px $block-padding;
+  }
+
+  &__footer {
+    display: flex;
+    background: $background;
+    border-top: $default-border;
+    padding: $block-padding;
+    border-radius: 0 0 $border-radius $border-radius;
+    justify-content: flex-end;
+  }
+
+  .options {
+    display: flex;
+    column-gap: 8px;
+
+    button {
+      border: $default-border;
+      border-radius: $border-radius;
+      padding: 4px 8px;
+      background-color: transparent;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+}

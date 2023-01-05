@@ -1,0 +1,35 @@
+@import "~src/variables";
+
+h3 {
+  margin-top: $margin;
+}
+
+.row {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  border: $default-border;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  padding: 3px 6px;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+
+  &:hover {
+    background-color: #ccc;
+  }
+
+  &.active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &.clear-filters {
+    margin-top: $margin * 2;
+    border-color: #ff0000;
+  }
+}

@@ -1,0 +1,35 @@
+@import "~src/variables";
+
+.holder {
+  margin: 32px auto 0;
+  width: 760px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+
+  .heading {
+    margin: 0;
+  }
+}
+
+.filters-col {
+  flex: 0 0 200px;
+}
+
+.list-col {
+  flex: 1 0 auto;
+}
+
+.list {
+  margin-top: $margin;
+  padding: 8px;
+  border: $default-border;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.empty-items {
+  margin: 0 auto;
+}
